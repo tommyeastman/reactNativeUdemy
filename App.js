@@ -1,16 +1,13 @@
-// Import libraries to help create a component.
-
+// Import libraries and local files.
 import React from 'react';
-
-//import just the Text property from the react-native library
-import { Text } from 'react-native';
+import Header from './src/components/header';
 
 // Create a component and render it to the screen.
-//tell ReactNative that we want to render some text to the screen of our device.
+// Nest header component inside.
 export default class App extends React.Component {
   render() {
     return (
-        <Text>Some text.</Text>
+        <Header />
     );
   }
 }
