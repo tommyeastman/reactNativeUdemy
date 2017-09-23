@@ -3,6 +3,8 @@ to view the app, just go to the right wd in GitBash and run:
 ```javascript
 npm start
 ```
+#General Syntax
+Only use single quotes with React and ReactNative
 
 #Printing to screen
 "import" keyword introduced in ES6.
@@ -59,4 +61,71 @@ to render one component inside of another, just treat the imported component as 
 However, any self-closing tag should be written as:
 ```javascript
 <Header />
+```
+#Styling
+All styling is placed within each component file.
+Styling - JS objects which have certain property which sets the size, height, color, etc.
+Will look like CSS rules, but no CSS.
+Many of the properties are named the same, but with camelCase instead of dash-case.
+i.e. instead of
+```CSS
+font-size
+```
+use
+```javascript
+fontSize
+```
+to bring style into a component use:
+```javascript
+<Text style={textStyle}></Text>
+```
+the following is referred to as a prop which is short for property:
+```javascript
+style={textStyle}
+```
+The View tag is the equivalent of div.
+
+By using destructuring, remove duplicate references to the styles object.
+
+```javascript
+const { textStyle, viewStyle } = styles;
+    return (
+        <View style={viewStyle}>
+            <Text style={textStyle}>Albums</Text>
+        </View>
+    );
+```
+Alternative is:
+
+```javascript
+    return (
+        <View style={styles.viewStyle}>
+            <Text style={styles.textStyle}>Albums</Text>
+        </View>
+    );
+```
+justifyContent - vertical position
+alignItems - horizontal position
+these take values of:
+flex-start: default (top/left)
+center
+flex:end: bottom/right
+
+#Props
+Whenever we pass data from a parent component to a child component, we use the props system.
+props is a JS object for which you can define different properties.
+These props properties are basically variables.
+
+In the parent file, we specify the props property name. Here it's headerText.
+We also specify the value we want. Here it's 'Here we go'.
+```javascript
+<Header headerText={'Here we go'} />
+```
+In the child file, we pass props into the component.
+```javascript
+const Header = (props) => {}
+```
+When we want to reference the props property we use:
+```javascript
+<Text style={textStyle}>{props.headerText}</Text>
 ```
