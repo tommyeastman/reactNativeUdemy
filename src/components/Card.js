@@ -3,9 +3,10 @@ import React from 'react';
 import { View } from 'react-native';
 
 //define Card as function component.
-const Card = () => {
+const Card = (props) => {
     return (
         <View style={styles.containerStyle}>
+            {props.children}
         </View>);
 };
 

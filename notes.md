@@ -224,3 +224,7 @@ render() {
 ```
 use props when we want to communicate from a parent component to a child component
 use state for component's internal record keeping
+
+#Passing Components as props
+anytime we pass a component we write another component,
+that component will show up on the props object as props.children.
