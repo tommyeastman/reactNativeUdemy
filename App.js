@@ -9,9 +9,11 @@ import AlbumList from './src/components/AlbumList';
 class App extends React.Component {
   render() {
     return (
-      <View style={styles.viewStyle}>
+      <View>
         <Header headerText={'Here we go'} />
+        <View style={styles.viewStyle}>
         <AlbumList />
+        </View>
       </View>
     );
   }
@@ -20,8 +22,8 @@ class App extends React.Component {
 //style
 const styles = {
   viewStyle: {
-    height: 600,
-    backgroundColor: '#f4bb41',
+    backgroundColor: '#f4bb41', //orange
+    paddingTop: 50
   }
 };
 

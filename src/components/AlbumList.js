@@ -18,7 +18,7 @@ class AlbumList extends React.Component {
 const styles = {
     viewStyle: {
         height: 240,
-        backgroundColor: '#aaf442',
+        backgroundColor: '#aaf442', //green
         borderWidth: 1,
         borderColor: '#000',
         justifyContent: 'center',

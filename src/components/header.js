@@ -15,7 +15,7 @@ const Header = (props) => {
 const styles = {
     viewStyle: {
         height: 60,
-        backgroundColor: '#4286f4',
+        backgroundColor: '#4286f4', //blue
         borderWidth: 1,
         borderColor: '#000',
         //center the child text horiz and vertically
