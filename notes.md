@@ -129,3 +129,50 @@ When we want to reference the props property we use:
 ```javascript
 <Text style={textStyle}>{props.headerText}</Text>
 ```
+#Sourcing Data
+want to fetch data and show to user once loaded.
+need to make an AJAX/HTTP request from the mobile app to fetch the list of data.
+once have the data, need to build a list of the albums.
+
+#Components cont.
+for any component we create, we must return a single, top level JSX tag.
+Can't return 2 siblings at one time, i.e. can't do
+```javascript
+return (
+    <Header headerText={'Here we go'} />
+    <albumList />
+);
+```
+this would be equivalent to
+```javascript
+return 1;
+return 2;
+```
+instead need to use
+```javascript
+return (
+  <View>
+    <Header headerText={'Here we go'} />
+    <albumList />
+  </View>
+);
+```
+#HTTP requests
+everything we've made so far are functional components- functions which return some JSX to be displayed on the device.
+to fetch data, need to use a class-based component.
+Also use a class-based component if you have a large component which may require some helper methods.
+
+function-based component
+```javascript
+const myComponent = () => {
+    return(something);
+};
+```
+class-based component
+```javascript
+class myComponent extends Component {
+    render() {
+        return (something);
+    }
+}
+```
