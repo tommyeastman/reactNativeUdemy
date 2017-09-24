@@ -22,8 +22,7 @@ class App extends React.Component {
 //style
 const styles = {
   viewStyle: {
-    backgroundColor: '#f4bb41', //orange
-    paddingTop: 50 //gives padding to child (AlbumList)
+    //backgroundColor: '#f4bb41', //orange
   }
 };
 
