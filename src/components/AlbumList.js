@@ -1,17 +1,14 @@
 //import libraries
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 
 //make component
-class albumList extends Component {
+class AlbumList extends React.Component {
     render() {
-        const { textStyle, viewStyle } = styles;
-
+        const { viewStyle, textStyle } = styles;
         return (
             <View style={viewStyle}>
-                <View style={viewStyle}><Text style={textStyle}>Album 1</Text></View>
-                <View style={viewStyle}><Text style={textStyle}>Album 2</Text></View>
-                <View style={viewStyle}><Text style={textStyle}>Album 3</Text></View>
+                <Text style={textStyle}>Album 1</Text>
             </View>
         );
     }
@@ -20,21 +17,19 @@ class albumList extends Component {
 //style
 const styles = {
     viewStyle: {
-        backgroundColor: '#4286f4',
+        height: 240,
+        backgroundColor: '#aaf442',
+        borderWidth: 1,
+        borderColor: '#000',
         justifyContent: 'center',
-        alignItems: 'center',
-        height: 60,
-        paddingTop: 15,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2, },
-        shadowOpacity: 0.2,
-        elevation: 2,
-        position: 'relative'
+        alignItems: 'center'
     },
     textStyle: {
-        fontSize: 20
+        fontSize: 20,
+        borderWidth: 1,
+        borderColor: '#000'
     }
 };
 
 //export
-export default albumList;
+export default AlbumList;

@@ -170,9 +170,10 @@ const myComponent = () => {
 ```
 class-based component
 ```javascript
-class myComponent extends Component {
+class MyComponent extends Component {
     render() {
         return (something);
     }
 }
 ```
+##Classes need to be capitalized!!

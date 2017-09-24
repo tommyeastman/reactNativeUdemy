@@ -2,17 +2,27 @@
 import React from 'react';
 import { View } from 'react-native';
 import Header from './src/components/Header';
-import albumList from './src/components/AlbumList';
+import AlbumList from './src/components/AlbumList';
 
 // Create a component and render it to the screen.
 // Nest header component inside.
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
-      <View>
+      <View style={styles.viewStyle}>
         <Header headerText={'Here we go'} />
-        <albumList />
+        <AlbumList />
       </View>
     );
   }
 }
+
+//style
+const styles = {
+  viewStyle: {
+    height: 600,
+    backgroundColor: '#f4bb41',
+  }
+};
+
+export default App;
