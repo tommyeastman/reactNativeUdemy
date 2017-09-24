@@ -22,13 +22,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         //move text down 15 px
-        paddingTop: 15,
-        
-        //shadowColor: '#000',
-        //shadowOffset: { width: 0, height: 2, },
-        //shadowOpacity: 0.2,
-        //elevation: 2,
-        //position: 'relative'
+        paddingTop: 15
     },
     textStyle: {
         fontSize: 20,

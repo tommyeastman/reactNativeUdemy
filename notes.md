@@ -112,6 +112,11 @@ flex-start: default (top/left)
 center
 flex:end: bottom/right
 
+Much more common in RN than React.js to have components whose sole purpose is styling.
+In React you have the benefit of separate CSS sheets, where in RN you don't.
+
+use shadow to make components appear like they're coming off the screen.
+
 #Props
 Whenever we pass data from a parent component to a child component, we use the props system.
 props is a JS object for which you can define different properties.

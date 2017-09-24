@@ -3,10 +3,9 @@ import React from 'react';
 import { View } from 'react-native';
 import Header from './src/components/Header';
 import AlbumList from './src/components/AlbumList';
-//import AlbumDetail from './src/components/AlbumDetail';
 
-// Create a component and render it to the screen.
-// Nest header component inside.
+// Create App component and render it to the screen.
+// Nest Header and AlbumList components inside.
 class App extends React.Component {
   render() {
     return (
@@ -24,7 +23,7 @@ class App extends React.Component {
 const styles = {
   viewStyle: {
     backgroundColor: '#f4bb41', //orange
-    paddingTop: 50
+    paddingTop: 50 //gives padding to child (AlbumList)
   }
 };
 

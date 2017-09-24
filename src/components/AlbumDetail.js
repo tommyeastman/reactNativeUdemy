@@ -1,13 +1,16 @@
-//import libraries and local files
+//import libraries
 import React from 'react';
 import { View, Text } from 'react-native';
 
-//define component
+//define AlbumDetail as function component
+//display album title, which is passed in
 const AlbumDetail = (props) => {
     return (
-    <View style={styles.viewStyle}>
-    <Text style={styles.textStyle}>{props.album.title}</Text>
-    </View>);
+        <View style={styles.viewStyle}>
+            <Text style={styles.textStyle}>
+                {props.album.title}
+            </Text>
+        </View>);
 };
 
 //style
@@ -18,7 +21,8 @@ const styles = {
         borderWidth: 1,
         borderColor: '#000',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        //paddingTop: 50
     },
     textStyle: {
         fontSize: 20,
@@ -26,7 +30,6 @@ const styles = {
         borderColor: '#000'
     }
 };
-
 
 //export component
 export default AlbumDetail;
