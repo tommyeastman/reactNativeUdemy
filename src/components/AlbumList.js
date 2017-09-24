@@ -1,7 +1,8 @@
 //import libraries
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 //make component
 class AlbumList extends React.Component {
@@ -13,14 +14,15 @@ class AlbumList extends React.Component {
     }
 
     renderAlbums() {
-        return this.state.albums.map(album => <Text key={album.title}>{ album.title }</Text>);
+        return this.state.albums.map(album =>
+        <AlbumDetail key={album.title} album={album} />);
     }
 
     render() {
-        console.log(this.state);
+        //console.log(this.state);
 
         return (
-            <View style={styles.viewStyle}>
+            <View>
                 { this.renderAlbums() }
             </View>
         );
@@ -28,21 +30,15 @@ class AlbumList extends React.Component {
 }
 
 //style
-const styles = {
-    viewStyle: {
-        height: 240,
-        backgroundColor: '#aaf442', //green
-        borderWidth: 1,
-        borderColor: '#000',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-    // textStyle: {
-    //     fontSize: 20,
-    //     borderWidth: 1,
-    //     borderColor: '#000'
-    // }
-};
+// const styles = {
+//     viewStyle: {
+//         backgroundColor: '#aaf442', //green
+//         borderWidth: 1,
+//         borderColor: '#000',
+//         //justifyContent: 'center',
+//         //alignItems: 'center'
+//     }
+// };
 
 //export
 export default AlbumList;

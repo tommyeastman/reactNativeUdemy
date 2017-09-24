@@ -3,6 +3,7 @@ import React from 'react';
 import { View } from 'react-native';
 import Header from './src/components/Header';
 import AlbumList from './src/components/AlbumList';
+//import AlbumDetail from './src/components/AlbumDetail';
 
 // Create a component and render it to the screen.
 // Nest header component inside.
