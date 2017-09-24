@@ -12,13 +12,16 @@ class AlbumList extends React.Component {
             .then(response => this.setState({ albums: response.data }));
     }
 
+    renderAlbums() {
+        return this.state.albums.map(album => <Text key={album.title}>{ album.title }</Text>);
+    }
+
     render() {
         console.log(this.state);
 
-        const { viewStyle, textStyle } = styles;
         return (
-            <View style={viewStyle}>
-                <Text style={textStyle}>Album 1</Text>
+            <View style={styles.viewStyle}>
+                { this.renderAlbums() }
             </View>
         );
     }
@@ -33,12 +36,12 @@ const styles = {
         borderColor: '#000',
         justifyContent: 'center',
         alignItems: 'center'
-    },
-    textStyle: {
-        fontSize: 20,
-        borderWidth: 1,
-        borderColor: '#000'
     }
+    // textStyle: {
+    //     fontSize: 20,
+    //     borderWidth: 1,
+    //     borderColor: '#000'
+    // }
 };
 
 //export

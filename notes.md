@@ -5,6 +5,7 @@ npm start
 ```
 #General Syntax
 Only use single quotes with React and ReactNative
+whenever you reference a JS variable within JSX, wrap it in {}
 
 #Printing to screen
 "import" keyword introduced in ES6.
@@ -195,6 +196,7 @@ HTTP requests are inherently asynchronous, meaning it takes some amount of time 
 #Component state
 State is how React handles changing the content that is shown on the screen.
 Anytime we change the state of a component, the component will automatically re-render itself to the device's screen.
+Only use state with class components.
 We have 2 states of our albums list - empty and full of data.
 Setting up our list to update from the HTTP request takes 3 steps:
 1. set default or initial state for component
