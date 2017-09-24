@@ -12,7 +12,7 @@ class App extends React.Component {
       <View>
         <Header headerText={'Here we go'} />
         <View style={styles.viewStyle}>
-        <AlbumList />
+          <AlbumList />
         </View>
       </View>
     );

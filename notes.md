@@ -157,7 +157,7 @@ return (
   </View>
 );
 ```
-#HTTP requests
+#Class-based components
 everything we've made so far are functional components- functions which return some JSX to be displayed on the device.
 to fetch data, need to use a class-based component.
 Also use a class-based component if you have a large component which may require some helper methods.
@@ -176,4 +176,44 @@ class MyComponent extends Component {
     }
 }
 ```
-##Classes need to be capitalized!!
+**Classes need to be capitalized!!**
+
+##Lifecycle Methods
+Only available to class-based components
+lifecycle methods - functions we will place on our class which will be automatically called at some point
+componentWillMount() will automatically be called anytime a component is about to be rendered to the screen
+
+#HTTP Requests
+Use Axios library, better than native .fetch()
+[https://medium.com/@thejasonfile/fetch-vs-axios-js-for-making-http-requests-2b261cdd3af5]
+axios.get() is an http request which returns a promise.
+use promise to get a notification that http request is complete.
+function we pass to .then will be called once the http request is complete
+
+HTTP requests are inherently asynchronous, meaning it takes some amount of time to complete that network request.
+
+#Component state
+State is how React handles changing the content that is shown on the screen.
+Anytime we change the state of a component, the component will automatically re-render itself to the device's screen.
+We have 2 states of our albums list - empty and full of data.
+Setting up our list to update from the HTTP request takes 3 steps:
+1. set default or initial state for component
+add class-level property of state
+set albums piece of state to an empty array
+```javascript
+class AlbumList extends React.Component {
+    state = { albums: [] };
+```
+whenever our component is created, it will now have a property called this.state that will be empty.
+2. when we fetch our data, tell our component state to update
+```javascript
+axios.get('https://rallycoding.herokuapp.com/api/music_albums')
+    .then(response => this.setState({ albums: response.data }));
+```
+3. make sure that component makes use of the state
+```javascript
+render() {
+    console.log(this.state);
+```
+use props when we want to communicate from a parent component to a child component
+use state for component's internal record keeping
