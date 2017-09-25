@@ -31,8 +31,8 @@ const styles = {
     },
     textStyle: {
         fontSize: 20,
-        borderWidth: 1,
-        borderColor: '#000'
+        //borderWidth: 1,
+        //borderColor: '#000'
     }
 };
 
