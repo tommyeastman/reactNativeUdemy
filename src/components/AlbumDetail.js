@@ -7,35 +7,50 @@ import CardSection from './CardSection';
 //define AlbumDetail as function component
 //display album title, which is passed in
 const AlbumDetail = ({ album }) => {
-    const { title, artist, thumbnail_image } = album;
+    const { title, artist, thumbnail_image, image } = album;
 
     return (
         <Card>
             <CardSection>
-                <View>
+                <View style={styles.thumbnailContainer} >
                     <Image
-                    source={{ uri: thumbnail_image }}
-                    style={styles.thumbnailStyle}
+                        source={{ uri: thumbnail_image }}
+                        style={styles.thumbnailStyle}
                     />
                 </View>
                 <View style={styles.headerContentStyle} >
-                    <Text style={styles.textStyle}>
+                    <Text style={styles.titleStyle}>
                         {title}
                     </Text>
-                    <Text style={styles.textStyle}>
+                    <Text>
                         {artist}
                     </Text>
                 </View>
             </CardSection>
-        </Card>);
+
+            <CardSection>
+                <View>
+                    <Text>
+                        Heloooo
+                    </Text>
+                </View>
+            </CardSection>
+
+            <CardSection>
+                <Image
+                    source={{ uri: image }}
+                    style={styles.imageStyle}
+                />
+            </CardSection>
+
+        </Card>
+    );
 };
 
 //style
 const styles = {
-    textStyle: {
-        //fontSize: 20,
-        //borderWidth: 1,
-        //borderColor: '#000'
+    titleStyle: {
+        fontSize: 18
     },
     headerContentStyle: {
         flexDirection: 'column',
@@ -44,6 +59,17 @@ const styles = {
     thumbnailStyle: {
         height: 50,
         width: 50
+    },
+    thumbnailContainer: {
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginLeft: 10,
+        marginRight: 10
+    },
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: null
     }
 };
 

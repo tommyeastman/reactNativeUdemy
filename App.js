@@ -11,19 +11,12 @@ class App extends React.Component {
     return (
       <View>
         <Header headerText={'Here we go'} />
-        <View style={styles.viewStyle}>
+        <View>
           <AlbumList />
         </View>
       </View>
     );
   }
 }
-
-//style
-const styles = {
-  viewStyle: {
-    //backgroundColor: '#f4bb41', //orange
-  }
-};
 
 export default App;
