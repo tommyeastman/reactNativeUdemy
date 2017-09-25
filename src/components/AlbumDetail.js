@@ -1,3 +1,11 @@
+//AlbumDetail is the "inner loop"
+//This function is called for every album in the array fetched from the API.
+//The function displays a card for the album.
+//The card is composed of several card sections for
+//1. header (image, album, artist)
+//2. album artwork
+//3. Buy button
+
 //import libraries and local files.
 import React from 'react';
 import { View, Text, Image } from 'react-native';
@@ -44,6 +52,7 @@ const styles = {
     titleStyle: {
         fontSize: 18
     },
+    //vertically space out album and artist text
     headerContentStyle: {
         flexDirection: 'column',
         justifyContent: 'space-around'
@@ -58,6 +67,7 @@ const styles = {
         marginLeft: 10,
         marginRight: 10
     },
+    //fill the screen with image
     imageStyle: {
         height: 300,
         flex: 1,

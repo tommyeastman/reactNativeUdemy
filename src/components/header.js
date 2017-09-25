@@ -1,3 +1,6 @@
+//Define reusable header component which takes in text as a prop
+//from the JSX tag that is used to call it.
+
 //import libraries for making a component
 import React from 'react';
 import { Text, View } from 'react-native';
@@ -36,5 +39,4 @@ const styles = {
     }
 };
 
-//make the component available to other parts of the app
 export default Header;

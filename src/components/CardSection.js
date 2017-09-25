@@ -1,3 +1,9 @@
+//Define styling for each card section.
+//There is a separate card section for the
+//1. header (image, album, artist)
+//2. album artwork
+//3. Buy button
+
 //import libraries
 import React from 'react';
 import { View } from 'react-native';

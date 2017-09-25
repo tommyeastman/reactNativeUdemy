@@ -1,3 +1,6 @@
+//AlbumList is basically a function to pull the data from the API
+//and feed each element of the returned array into AlbumDetail as a prop
+
 //import libraries and local files.
 import React from 'react';
 import { View } from 'react-native';
@@ -25,7 +28,7 @@ class AlbumList extends React.Component {
     }
 
     render() {
-        console.log(this.state.albums);
+        //console.log(this.state.albums);
 
         return (
             <View>

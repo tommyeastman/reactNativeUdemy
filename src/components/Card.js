@@ -1,3 +1,5 @@
+//Defines the styling for each card. There is one card per album.
+
 //import libraries
 import React from 'react';
 import { View } from 'react-native';
