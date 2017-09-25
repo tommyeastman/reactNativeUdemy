@@ -117,6 +117,9 @@ In React you have the benefit of separate CSS sheets, where in RN you don't.
 
 use shadow to make components appear like they're coming off the screen.
 
+##Images
+Unless you specify a size for your image, it won't display on the screen.
+
 #Props
 Whenever we pass data from a parent component to a child component, we use the props system.
 props is a JS object for which you can define different properties.
@@ -228,3 +231,49 @@ use state for component's internal record keeping
 #Passing Components as props
 anytime we pass a component we write another component,
 that component will show up on the props object as props.children.
+
+Whenever have multiple references to props like so:
+```javascript
+const AlbumDetail = (props) => {
+    return (
+        <Card>
+            <CardSection>
+                <View>
+                    <Image source={{ uri: props.album.thumbnail_image }} />
+                </View>
+                <View>
+                    <Text style={styles.textStyle}>
+                        {props.album.title}
+                    </Text>
+                    <Text style={styles.textStyle}>
+                        {props.album.artist}
+                    </Text>
+                </View>
+            </CardSection>
+        </Card>);
+};
+```
+you can destructure props like so:
+```javascript
+const AlbumDetail = ({ album }) => {
+    const { title, artist, thumbnail_image } = album;
+
+    return (
+        <Card>
+            <CardSection>
+                <View>
+                    <Image source={{ uri: thumbnail_image }} />
+                </View>
+                <View>
+                    <Text style={styles.textStyle}>
+                        {title}
+                    </Text>
+                    <Text style={styles.textStyle}>
+                        {artist}
+                    </Text>
+                </View>
+            </CardSection>
+        </Card>);
+};
+```
+these will return the same thing.
