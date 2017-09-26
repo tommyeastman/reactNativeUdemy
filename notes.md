@@ -277,3 +277,7 @@ const AlbumDetail = ({ album }) => {
 };
 ```
 these will return the same thing.
+
+#Scrolling
+Content is not scrollable by default. This is a key difference between React and ReactNative.
+Whenever you have a ScrollView, you must add a style property of flex: 1 to your root element.

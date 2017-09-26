@@ -1,7 +1,7 @@
 // Import libraries and local files.
 import React from 'react';
 import { View } from 'react-native';
-import Header from './src/components/Header';
+import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 
 // Create App component and render it to the screen.
@@ -9,7 +9,7 @@ import AlbumList from './src/components/AlbumList';
 class App extends React.Component {
   render() {
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <Header headerText={'Here we go'} />
         <View>
           <AlbumList />
