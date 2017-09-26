@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Header headerText={'Here we go'} />
+        <Header headerText={'Albums'} />
         <View>
           <AlbumList />
         </View>

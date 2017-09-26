@@ -17,26 +17,20 @@ const Header = (props) => {
 
 const styles = {
     viewStyle: {
-        height: 60,
-        backgroundColor: '#4286f4', //blue
-        borderWidth: 1,
-        borderRadius: 2, // rounded corners
-        borderColor: '#ddd', //light gray
-        shadowColor: '#000', //black
-        shadowOffset: { width: 0, height: 2 }, //no side shadow, some bottom
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        //center the child text horiz and vertically
-        justifyContent: 'center',
-        alignItems: 'center',
-        //move text down 15 px
-        paddingTop: 15
+      backgroundColor: '#F8F8F8',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 60,
+      paddingTop: 15,
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.2,
+      elevation: 2,
+      position: 'relative'
     },
     textStyle: {
-        fontSize: 20,
-        //borderWidth: 1,
-        //borderColor: '#000'
+      fontSize: 20
     }
-};
+  };
 
 export default Header;
