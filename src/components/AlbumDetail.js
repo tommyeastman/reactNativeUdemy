@@ -8,14 +8,14 @@
 
 //import libraries and local files.
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Button } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 
 //define AlbumDetail as function component
 //display album title, which is passed in
 const AlbumDetail = ({ album }) => {
-    const { title, artist, thumbnail_image, image } = album;
+    const { title, artist, thumbnail_image, image, url } = album;
 
     return (
         <Card>
@@ -43,6 +43,15 @@ const AlbumDetail = ({ album }) => {
                 />
             </CardSection>
 
+            <CardSection>
+                <Button
+                    //onPress={() => Linking.openURL({ url })}
+                    onPress={() => {
+                        console.log({ url });
+                        }}
+                    title='Click me'
+                />
+            </CardSection>
         </Card>
     );
 };
@@ -74,6 +83,19 @@ const styles = {
         width: null
     }
 };
+
+/*
+const redirect = (props) => {
+    console.log({props.url});
+    return ({props.url});
+};*/
+
+/*
+const redirect = (props) => {
+    //console.log("thisString");
+    console.log({props.title});
+    return ('thisString');
+};*/
 
 //export component
 export default AlbumDetail;

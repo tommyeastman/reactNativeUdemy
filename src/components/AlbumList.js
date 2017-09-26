@@ -28,7 +28,7 @@ class AlbumList extends React.Component {
     }
 
     render() {
-        //console.log(this.state.albums);
+        console.log(this.state.albums);
 
         return (
             <ScrollView>

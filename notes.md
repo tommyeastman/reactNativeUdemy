@@ -281,3 +281,7 @@ these will return the same thing.
 #Scrolling
 Content is not scrollable by default. This is a key difference between React and ReactNative.
 Whenever you have a ScrollView, you must add a style property of flex: 1 to your root element.
+
+#Linking
+Linking library/Linking API is how you get your RN app to interact with other apps on the user device,
+including the browser or any other app - amazon, uber, etc.
