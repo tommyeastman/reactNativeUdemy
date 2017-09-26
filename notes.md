@@ -285,3 +285,20 @@ Whenever you have a ScrollView, you must add a style property of flex: 1 to your
 #Linking
 Linking library/Linking API is how you get your RN app to interact with other apps on the user device,
 including the browser or any other app - amazon, uber, etc.
+
+Linking with button.
+When you want to console log the url, you pass it in as an object i.e. {url}
+
+```javascript
+<Button
+onPress={() => {
+    console.log({ url });
+    }}
+/>
+```
+When you are passing the url into the .openURL method, you're not passing it the object.
+You're passing it the string. So you use url.
+Need to understand this better.
+```javascript
+onPress={() => Linking.openURL(url)}
+```
