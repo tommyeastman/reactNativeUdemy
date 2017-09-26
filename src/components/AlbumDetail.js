@@ -47,10 +47,11 @@ const AlbumDetail = ({ album }) => {
             </CardSection>
 
             <CardSection>
-                <MyButton
-                    pressFunction={() => Linking.openURL(url)}
-                    text={'Click me'}
-                />
+                <MyButton pressFunction={() => Linking.openURL(url)}>
+                    <Text>
+                        Buy Now
+                    </Text>
+                </MyButton>
             </CardSection>
         </Card>
     );
