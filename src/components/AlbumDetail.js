@@ -8,26 +8,29 @@
 
 //import libraries and local files.
 import React from 'react';
-import { View, Text, Image, Button, Linking } from 'react-native';
+import { View, Text, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import MyButton from './MyButton';
 
 //define AlbumDetail as function component
 //display album title, which is passed in
 const AlbumDetail = ({ album }) => {
     const { title, artist, thumbnail_image, image, url } = album;
+    const { headerContentStyle, thumbnailStyle, thumbnailContainer,
+            titleStyle, imageStyle } = styles;
 
     return (
         <Card>
             <CardSection>
-                <View style={styles.thumbnailContainer} >
+                <View style={thumbnailContainer} >
                     <Image
                         source={{ uri: thumbnail_image }}
-                        style={styles.thumbnailStyle}
+                        style={thumbnailStyle}
                     />
                 </View>
-                <View style={styles.headerContentStyle} >
-                    <Text style={styles.titleStyle}>
+                <View style={headerContentStyle} >
+                    <Text style={titleStyle}>
                         {title}
                     </Text>
                     <Text>
@@ -39,14 +42,14 @@ const AlbumDetail = ({ album }) => {
             <CardSection>
                 <Image
                     source={{ uri: image }}
-                    style={styles.imageStyle}
+                    style={imageStyle}
                 />
             </CardSection>
 
             <CardSection>
-                <Button
-                    onPress={() => Linking.openURL(url)}
-                    title='Click me'
+                <MyButton
+                    pressFunction={() => Linking.openURL(url)}
+                    text={'Click me'}
                 />
             </CardSection>
         </Card>
