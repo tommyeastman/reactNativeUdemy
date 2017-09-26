@@ -1,5 +1,7 @@
 #Setup
-to view the app, just go to the right wd in GitBash and run:
+[Create a RN IOS app on Windows](https://github.com/react-community/create-react-native-app/blob/master/README.md#getting-started)
+
+To view the app, just go to the right wd in GitBash and run:
 ```javascript
 npm start
 ```
